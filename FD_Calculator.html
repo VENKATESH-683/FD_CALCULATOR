@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD CALCULATOR</title>
+</head>
+
+<body>
+    <center>
+        <div class="box">
+             <h1>FD CALCULATOR</h1>
+    
+    <p class="para">
+        Principle Amount 
+    </p>
+    <input class="input1" placeholder="Principle Amount ">    
+
+    <p class="para">
+        Interest Rate
+    </p>
+    <input class="input2" placeholder="Interest Rate">
+    <p class="para">
+        Tenure(in Years)
+    </p>
+    <input class="input3" placeholder="Tenure(in Years)">
+
+    <button class="button" onclick="fd()">CALCULATE</button>
+    <p class="result">result</p>
+        </div>
+    </center>
+    
+
+
+    
+
+<style>
+    body{
+        background-color: beige;
+    }
+    .box{
+        background-color: white;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+}
+.para{
+    display: block;
+    text-align: left;
+    margin-left: 5%;
+    padding: 5px;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+
+}
+.input1,.input2,.input3{
+    display: block;
+    width: 90%;
+    padding: 5px;
+}
+.button{
+    margin: 20px;
+}
+.box:hover
+{
+box-shadow:10px 10px 10px black;
+
+}
+.input1:hover,.input2:hover,.input3:hover{
+    background-color: beige;
+}
+.button:hover{
+    background-color: burlywood;
+}
+</style>
+
+
+
+<script>
+
+
+    function fd()
+    {
+    var Amount=document.querySelector(".input1").value
+    var rate=document.querySelector(".input2").value
+    var tenure=document.querySelector(".input3").value
+    var result=document.querySelector(".result")
+
+    var Amountvalue=parseFloat(Amount)
+    var ratevalue=parseFloat(rate)
+    var tenurevalue=parseFloat(tenure)
+
+    var res=Amountvalue*(1+(ratevalue*tenurevalue)/100)
+    result.textContent=res
+    }
+
+
+</script>
+
+
+    
+</body>
+</html>
